@@ -224,6 +224,72 @@ h1,h2,h3{
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
 } 
+.cardz{
+  border-radius: 10px;
+  color: #fff;
+  background: rgb(35, 43, 58);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.309), 0 0 6px rgba(0, 0, 0, 0.321);
+  transition: .7s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 30px 18px 16px;
+  cursor: pointer;
+  min-height: 500px;
+  border-radius: 10px;
+  margin: 0 4%;
+  }
+
+.cardz:hover{
+transform: scale(1.1);
+box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.512);
+background-color: #de6e62;
+}
+
+.cardz h3{
+font-weight: 600;
+padding: 2rem 0.5rem;
+
+}
+.cardz p {
+font-weight: 400;
+padding-top: 2rem;
+
+}
+
+.cardz img{
+position: absolute;
+padding: 10px;
+right: 15px;
+max-height: 100px;
+opacity: 0.5;
+
+
+}
+
+.cardz-1{
+background-image:  url(https://s7.gifyu.com/images/wallet.png);
+    background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px;
+}
+
+.cardz-2{
+ background-image: url(https://s7.gifyu.com/images/photo.png);
+    background-repeat: no-repeat;
+  background-position: top right;
+  background-size:60px;
+}
+
+.cardz-3{
+ background-image: url(https://s7.gifyu.com/images/photography.png);
+    background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px;
+}
+
+@media(max-width: 990px){
+.cardz{
+  margin: 20px;
+}
+} 
 
 
 .pagination {
@@ -277,8 +343,8 @@ nav {
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px;
   padding-top: 10px;
-  background-color: rgba(255, 255, 255, 0.198);
-	backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0.296);
+	backdrop-filter: blur(9px);
   margin-left: -3vw;
   max-height: 70px;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
@@ -467,12 +533,12 @@ nav {
                 }
                 #inlay {
                   padding: 0.5em;
-                  background: #243841;
+                  background: #24384100;
                   color: white;
                   border-radius: 9px;
                 }
                 #icon {
-                  background: #de6e62;
+                  background: #de6e6200;
                  
                   min-width: 60px;
                   max-width: 60px;
@@ -482,10 +548,10 @@ nav {
                   margin-bottom: 0.5em;
                 }
                 #icon:hover {
-                  background: #243841;
+                  background: #24384100;
                 }
                 #inlay:hover {
-                  background: #de6e62;
+                  background: #de6e6200;
                 }
                 #txt {
                   font-size: 0.7em;
@@ -1589,7 +1655,8 @@ $color: rgb(255, 96, 60);
     display: grid;
     grid-row: 17;
     grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background: white !important;
+    background: rgba(255, 255, 255, 0) !important;
+    margin-bottom: 10vh;
 }
   // FOOT CONTENT 
   #logofoot {
