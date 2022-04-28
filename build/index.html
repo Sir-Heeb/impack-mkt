@@ -126,33 +126,56 @@
     })(jQuery); // end function
   });
 </script>
-<script defer src="main.6fe424e80c1e580affd7.js"></script></head>
+<script>
+  (function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
+<script defer src="main.b0bdc99aedff719eac7f.js"></script></head>
 
 <body>
- 
+  
+  <div class="navigation" style=" background-color: rgba(255, 255, 255, 0.296); backdrop-filter: blur(9px);">
+  <div class="nav-container">
+    <div class="brand">
+      <a id="first" href="#!">  <img width="200px" src="https://ipfs.io/ipfs/QmW4rw9uowgQeStDUdbJAJYhGCf2xnAubZBmUFbuZ4494x" id="logoimg" /></a>
+    </div>
     <nav>
-      <div id="first">
-        <div id="logo">
-          <img src="https://ipfs.io/ipfs/QmW4rw9uowgQeStDUdbJAJYhGCf2xnAubZBmUFbuZ4494x" id="logoimg" />
-        </div>
-        <div id="search">
-          <input id='search-btn' type='checkbox'/>
-          <label for='search-btn'>Show search bar</label>
-          <input id='search-bar' type='text' placeholder='Search...'/>
-         
-        </div>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
       </div>
-      <div id="links">
-        <button  id="homebtn">Home</button>
-        <button id="aboutbtn">About</button>
-        <button id="servicebtn">Service</button>
-        <button id="contactbtn">Contact</button>
-      </div>
-      <div id="defilinks">
-        <a href="#" class="buttony">Connect</a>
-      </div>
-    
+      <ul class="nav-list">
+        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+        <li><a href="#!">Home</a></li>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Service</a></li>
+        <li><a href="#!">Contact</a></li>
+        <li><a href="#!"><button style="margin-top: 3px; margin-left: 120px; " class="glow-on-hover" >CONNECT</button></a></li>
+      </ul>
     </nav>
+  </div>
+</div>
+   
   
       <div id="stage">
         <div id="box">
@@ -163,12 +186,13 @@
               Co-creating the world`s largest Impact Marketplace through our
               ecosystem of positive changemakers.
             </div>
+          
           </div>
           <div id="introimg">
             <img src="https://ipfs.io/ipfs/QmUMqAhzCL1fc7EXBbhUsjwyEJGiAwsbJU5UaYyTZMf9iG" id="introimg" class="movinglogo floating" />
           </div>
         </div>
-    <div id="box">
+    <div id="box" >
       <div id="cardy" class="uno cardz cardz-1">
         <div id="inlay">
        
